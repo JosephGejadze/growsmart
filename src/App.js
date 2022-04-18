@@ -1,10 +1,22 @@
-import styles from "./App.module.scss";
+import { useEffect, useState } from "react";
+import Navbar from "./components/Navbar";
+import { PAGES } from "./constants";
+import DeviceControlPage from "./pages/deviceControlPage/DeviceControlPage";
+import HomePage from "./pages/homePage/HomePage";
 
 function App() {
+  const [currentPage, setCurrentPage] = useState(PAGES.HOME_PAGE);
+
   return (
-    <div className={styles.app}>
-      <header className="App-header">Go Grow Go</header>
-      <h3>subheader</h3>
+    <div style={{ height: "100%" }}>
+      <Navbar currentPage={currentPage} setCurrentPage={setCurrentPage} />
+      {currentPage === PAGES.HOME_PAGE && <HomePage />}
+      {currentPage === PAGES.DEVICE_CONTROL_PAGE ? (
+        <DeviceControlPage />
+      ) : (
+        <></>
+      )}
+      {currentPage === PAGES.ABOUT_US_PAGE && <></>}
     </div>
   );
 }

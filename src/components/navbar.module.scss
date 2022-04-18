@@ -1,0 +1,47 @@
+.navbar {
+    background-color: #bae8e8;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.buttons_div {
+    width: 30;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 4px;
+}
+.logo {
+    margin-left: 15px;
+    font-weight: bold;
+    color:#272343;
+    text-align: start;
+    font-size: larger;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Anton', sans-serif;
+    text-shadow: 2px 2px #ffd803;
+    text-decoration: overline underline;
+    text-decoration-style: wavy;
+    color: #272343;
+}
+.navbar_button {
+    font-weight: bold;
+    font-size: larger;
+    background-color: #ffd803;
+    font-size:larger; 
+    color:  #272343;
+    width: 10vw;
+    border-radius: 5px;
+    border: none;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    height: 45px;
+    cursor: pointer;
+}
+
+.navbar_button_selected {
+    color: white;
+}
+
+
+
