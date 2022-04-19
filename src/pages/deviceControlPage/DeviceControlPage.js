@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import styles from "./deviceControlPage.module.scss";
 import water from "../../images/water.png";
 import light from "../../images/light.png";
@@ -27,6 +27,7 @@ const DeviceControlPage = () => {
               marginTop: `calc(${(100 - Number(lightLevel)) / 8}px)`,
               marginBottom: "300",
             }}
+            alt="param"
           />
         </div>
         <input
@@ -55,6 +56,7 @@ const DeviceControlPage = () => {
               height: `calc(${Number(waterLevel) + 50}px)`,
               marginTop: `calc(${(100 - Number(waterLevel)) / 2}px)`,
             }}
+            alt="param"
           />
         </div>
         <input
@@ -83,6 +85,7 @@ const DeviceControlPage = () => {
               height: `calc(${Number(airHumidityLevel) + 50}px)`,
               marginTop: `calc(${(100 - Number(airHumidityLevel)) / 2}px)`,
             }}
+            alt="param"
           />
         </div>
         <input
@@ -111,6 +114,7 @@ const DeviceControlPage = () => {
               height: `calc(${Number(naxshirorjangisLevel) + 50}px)`,
               marginTop: `calc(${(100 - Number(naxshirorjangisLevel)) / 2}px)`,
             }}
+            alt="param"
           />
         </div>
         <input
