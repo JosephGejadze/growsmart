@@ -1,12 +1,60 @@
 .AboutUsPage {
-    background-color: #eff0f3;
-    width: 100%;
-    height: 93.5%;
+    background-color: #eff0f3;;
     position: absolute;
-    color: black;
+    width: 100%;
+    height:auto;
     display: flex;
     justify-content: center;
-    flex-direction: column;
     align-items: center;
+    flex-wrap: wrap;
+}
 
+.ContainerWe{
+    width: 80rem;
+    margin: 70px;
+    height: 35rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    padding: 40px;
+    border: 15px dotted #ffd803;
+    background-image: url("../../images/BackgroundImg.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    .Usheader {
+        color: #272343;
+        background-color: #ffd803;
+        font-size:xx-large;
+        font-weight: bold;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        padding: 1rem;
+        font-family: "Anton", sans-serif;
+    }
+    ul li{
+        margin-bottom: 25px;
+        list-style-type: circle;
+        font-size: larger;
+        font-family: "Anton", sans-serif;
+        margin-bottom: 5rem;
+    }
+}
+.Container {
+  margin: 70px;
+  width: 40rem;
+  height: 25rem;
+  background-color: #bae8e8;
+  border: 1px solid #bae8e8;
+  box-shadow: 30px 30px 15px #ffd803;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 2rem;
+  .Images {
+    width: "17rem";
+    height: auto;
+    padding: 15px;
+  }
 }
