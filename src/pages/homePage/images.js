@@ -15,7 +15,6 @@ export default function ImageSwapper() {
       } else {
         setCurrentImage((x) => x + 1);
       }
-      console.log(currentImage);
     }, 5000);
 
     return () => clearTimeout(timeoutId);

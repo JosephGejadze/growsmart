@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Jost:wghtJost:wght@200;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jost:wghtJost:wght@200;500&display=swap");
 .hompage {
   background: url("../../images/6.gif");
   background-repeat: no-repeat;
@@ -13,16 +13,15 @@
   align-items: center;
 
   .header {
-    margin-top: 4rem;
     text-align: center;
     font-size: 2rem;
     text-shadow: 4px 4px #f8973d;
     text-decoration-style: wavy;
     color: #274750;
-    font-family: 'Bangers', cursive;
+    font-family: "Bangers", cursive;
     line-height: 1;
     letter-spacing: 0.09em;
-    font-family: 'Bangers', cursive;
+    font-family: "Bangers", cursive;
   }
   .mini_description {
     text-align: center;
@@ -30,7 +29,7 @@
     text-decoration-style: wavy;
     color: #374443;
     text-shadow: 4px 4px #f8973d;
-    font-family: 'Bangers', cursive;
+    font-family: "Bangers", cursive;
     letter-spacing: 0.09em;
   }
   .mainContent {
@@ -41,33 +40,31 @@
     flex-wrap: wrap;
     height: auto;
     margin-bottom: 15px;
-  .Grow{
-    width: 30rem;
-    color: #274750;
-    font-size: 1rem;
-    font-family: 'Jost', sans-serif;
-    font-weight: 600;
+    .Grow {
+      width: 30rem;
+      color: #274750;
+      font-size: 1rem;
+      font-family: "Jost", sans-serif;
+      font-weight: 600;
 
-    h1 {
-      font-size: 1.2rem;
-      color: #274750;
-      font-family: 'Bangers', cursive;  
-      letter-spacing: 0.2em;
-      width: inherit;
-    } 
-     h1::first-letter {
-      color: #274750;
-      text-shadow: 3px 3px #f8973d;
-      letter-spacing: 0.2em;
-      font-size: 1.1em;
-      border: solid #6b936c;
-      padding: 2px;
-      margin: 3px;
+      h1 {
+        font-size: 1.2rem;
+        color: #274750;
+        font-family: "Bangers", cursive;
+        letter-spacing: 0.2em;
+        width: inherit;
+      }
+      h1::first-letter {
+        color: #274750;
+        text-shadow: 3px 3px #f8973d;
+        letter-spacing: 0.2em;
+        font-size: 1.1em;
+        border: solid #6b936c;
+        padding: 2px;
+        margin: 3px;
+      }
     }
-
-  }
-    .descriptionGrow{
-
+    .descriptionGrow {
       background-repeat: no-repeat;
       background-position: right;
       background-size: 20%;
@@ -91,12 +88,12 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  .detailscontainer{
+  .detailscontainer {
     width: 30rem;
     background-color: #f3ede9;
     color: #274750;
     font-size: 1rem;
-    font-family: 'Bangers', cursive;
+    font-family: "Bangers", cursive;
     border-radius: 10px;
     padding: 1rem;
     line-height: 1.5;

@@ -22,10 +22,10 @@ const DeviceControlAuth = ({ onAuthenticate }) => {
     } else {
       alert("username or password incorrect");
     }
-  }, [username, password]);
+  }, [username, password, onAuthenticate]);
 
   return (
-    <div className={styles.DCpage}>
+    <div className={styles.authPage}>
       <div className={styles.authcontainer}>
         <h1>Please Log In</h1>
         <h2>Enter Username : </h2>
@@ -34,7 +34,7 @@ const DeviceControlAuth = ({ onAuthenticate }) => {
         <input type="password" onChange={onPasswordChange} />
         <button onClick={onAuthClick}>Log In</button>
       </div>
-      <img src={plant} className={styles.plant}></img>
+      <img src={plant} className={styles.plant} alt="plant"></img>
     </div>
   );
 };
