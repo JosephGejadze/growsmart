@@ -17,7 +17,7 @@ const DeviceControlPage = () => {
         <div className={styles.container_header}>
           <h1>Lighting</h1>
         </div>
-        <div>Current sitoation ??? </div>
+        <div></div>
         <div className={styles.image_container}>
           <img
             src={light}
@@ -47,7 +47,7 @@ const DeviceControlPage = () => {
         <div className={styles.container_header}>
           <h1>Humidity</h1>
         </div>
-        <div>Current sitoation ??? </div>
+        <div></div>
         <div className={styles.image_container}>
           <img
             src={humidity}
@@ -76,7 +76,7 @@ const DeviceControlPage = () => {
         <div className={styles.container_header}>
           <h1>Humidity</h1>
         </div>
-        <div>Current sitoation ??? </div>
+        <div></div>
         <div className={styles.image_container}>
           <img
             src={co}
@@ -105,7 +105,7 @@ const DeviceControlPage = () => {
         <div className={styles.container_header}>
           <h1>Watering</h1>
         </div>
-        <div>Current sitoation ??? </div>
+        <div> </div>
         <div className={styles.image_container}>
           <img
             src={water}
