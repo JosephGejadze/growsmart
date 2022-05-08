@@ -1,10 +1,9 @@
 import growBox from "../../images/grow-box.png";
 import img3 from "../../images/img3.png";
-import chanto from "../../images/Niko.png";
 import { useState, useEffect, useCallback } from "react";
 import React from "react";
 
-const images = [growBox, img3, chanto];
+const images = [growBox, img3];
 
 export default function ImageSwapper() {
   const [currentImage, setCurrentImage] = useState(0);
@@ -16,8 +15,7 @@ export default function ImageSwapper() {
       } else {
         setCurrentImage((x) => x + 1);
       }
-      console.log(currentImage);
-    }, 2000);
+    }, 5000);
 
     return () => clearTimeout(timeoutId);
   }, [currentImage]);

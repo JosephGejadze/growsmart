@@ -11,9 +11,11 @@ function App() {
   return (
     <div>
       <Navbar currentPage={currentPage} setCurrentPage={setCurrentPage} />
-      {currentPage === PAGES.HOME_PAGE && <HomePage />}
-      {currentPage === PAGES.DEVICE_CONTROL_PAGE && <DeviceControlPage />}
-      {currentPage === PAGES.ABOUT_US_PAGE && <AboutUsPage />}
+      <div style={{ padding: "3rem 0" }}>
+        {currentPage === PAGES.HOME_PAGE && <HomePage />}
+        {currentPage === PAGES.DEVICE_CONTROL_PAGE && <DeviceControlPage />}
+        {currentPage === PAGES.ABOUT_US_PAGE && <AboutUsPage />}
+      </div>
     </div>
   );
 }
