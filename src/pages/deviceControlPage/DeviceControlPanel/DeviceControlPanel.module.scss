@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:wghtJost:wght@200;500&display=swap');
+.DCpage {
+    width: 100%;
+    height: auto;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+}
+
+.container_header {
+    text-align: center;
+  }
+  
+  .item {
+    color: #4a3517;
+    font-family: 'Bangers', cursive;
+    margin: 2rem 10rem 3rem 10rem;
+    width: 35rem;
+    height: 30rem;
+    border-radius: 10px;
+    letter-spacing: 0.2em;
+    font-size: 1.2rem;
+
+  }
+  
+  .light_item {
+    background-color: #85b2b2;
+  }
+  
+  .image_container {
+    margin-top: 5rem;
+    width: 100%;
+    text-align: center;
+    height: 150px;
+  }
+  
+  .slider {
+    margin-top: 6rem;
+    -webkit-appearance: none;
+    width: 100%;
+    height: 25px;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: 0.2s;
+    transition: opacity 0.2s;
+    border-radius: 5px;
+    background: #d3d3d3;
+  }
+  
+  .slider:hover {
+    opacity: 1;
+  }
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #fdd464;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .light_slider::-webkit-slider-thumb {
+    background: #402d12;
+    font-family: 'Jost', sans-serif;
+  }
+  
+  .light_slider::-moz-range-thumb {
+    background: #864660;
+  }
+  
+  .light_level_indicator {
+    width: 100%;
+    color: #402d12;
+    font-size: 40px;
+    text-align: center;
+    font-family: 'Jost', sans-serif;
+    font-weight: bold;
+  }
+  
+  .water_item {
+    background-color: #bba359;
+  }
+  
+  .water_level_indicator {
+    width: 100%;
+    color: #402d12;
+    font-size: 40px;
+    text-align: center;
+    font-family: 'Jost', sans-serif;
+    font-weight: bold;
+  }
+  
+  .water_slider::-webkit-slider-thumb {
+    background: #402d12;
+  }
+  
+  .water_slider::-moz-range-thumb {
+    background: #402d12;
+  }
+  
+  .air_humidity_item {
+    background-color: #f89a46;
+  }
+  
+  .air_humidity_indicator {
+    width: 100%;
+    color: #402d12;
+    font-size: 40px;
+    text-align: center;
+    font-family: 'Jost', sans-serif;
+    font-weight: bold;
+  }
+  
+  .air_humidity_slider::-webkit-slider-thumb {
+    background: #402d12;
+  }
+  
+  .air_humidity_slider::-moz-range-thumb {
+    background: #402d12;
+  }
+  
+  .naxshirorjangi_item {
+    background-color: #e5b098;
+  }
+  
+  .naxshirorjangi_indicator {
+    width: 100%;
+    color: #402d12;
+    font-size: 40px;
+    text-align: center;
+    font-family: 'Jost', sans-serif;
+    font-weight: bold;
+  }
+  
+  .naxshirorjangi_slider::-webkit-slider-thumb {
+    background: #402d12;
+  }
+  
+  .naxshirorjangi_slider::-moz-range-thumb {
+    background: #402d12;
+  }
+
+  .container {
+    background-color: #eff0f3;
+    width: 100%;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
