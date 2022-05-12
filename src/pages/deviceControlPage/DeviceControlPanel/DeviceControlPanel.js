@@ -1,69 +1,34 @@
-import React, { useState } from "react";
-import styles from "./DeviceControlPanel.module.scss";
-import water from "../../../images/water.png";
-import light from "../../../images/light.png";
-import humidity from "../../../images/humidity.png";
-import co from "../../../images/co.png";
-import DeviceControlItem from "../DeviceControlItem/DeviceControlItem";
+import React, { useEffect, useState } from "react";
+import DeviceControlPanelSwitch from "./DeviceControlPanelSwitch/DeviceControlPanelSwitch";
+import DeviceControlPanelAutomatic from "./DeviceControlPanelAutomatic/DeviceControlPanelAutomatic";
+import DeviceControlPanelManual from "./DeviceControlPanelManual/DeviceControlPanelManual";
+import Loading from "../../../components/Loading/Loading";
 
-const constraints = {
-  light: { min: 0, max: 24 },
-  moisture: { min: 0, max: 100 },
-  humidity: { min: 0, max: 100 },
-  co2: { min: 400, max: 5000 },
-};
-
-const constraintAvg = (str) => {
-  return (constraints[str].min + constraints[str].max) / 2;
+export const mode = {
+  manual: "manual",
+  automatic: "automatic",
 };
 
 const DeviceControlPanel = () => {
-  const [lightLevel, setLightLevel] = useState(constraintAvg("light"));
-  const [moistureLevel, setMoistureLevel] = useState(constraintAvg("moisture"));
-  const [humidityLevel, setHumidityLevel] = useState(constraintAvg("humidity"));
-  const [co2Level, setCo2Level] = useState(constraintAvg("co2"));
+  const [currentMode, setCurrentMode] = useState();
+
+  useEffect(() => {
+    setTimeout(() => setCurrentMode(mode.automatic), 3000);
+  }, []);
+
   return (
-    <div className={styles.DCpage}>
-      <DeviceControlItem
-        icon={light}
-        onChange={(e) => setLightLevel(e.target.value)}
-        value={lightLevel}
-        backgroundColor="#85b2b2"
-        title="Lighting"
-        min={0}
-        max={24}
+    <div>
+      <DeviceControlPanelSwitch
+        currentMode={currentMode}
+        setCurrentMode={setCurrentMode}
       />
-      <DeviceControlItem
-        icon={water}
-        onChange={(e) => setMoistureLevel(e.target.value)}
-        value={moistureLevel}
-        backgroundColor="#bba359"
-        title="Water"
-        min={0}
-        max={100}
-      />
-      <DeviceControlItem
-        icon={humidity}
-        onChange={(e) => setHumidityLevel(e.target.value)}
-        value={humidityLevel}
-        backgroundColor="#f89a46"
-        title="Humidity"
-        min={0}
-        max={100}
-      />
-      <DeviceControlItem
-        icon={co}
-        onChange={(e) => setCo2Level(e.target.value)}
-        value={co2Level}
-        backgroundColor="#e5b098"
-        title={
-          <span>
-            CO<sub>2</sub>
-          </span>
-        }
-        min={400}
-        max={5000}
-      />
+      {currentMode === mode.automatic ? (
+        <DeviceControlPanelAutomatic />
+      ) : currentMode === mode.manual ? (
+        <DeviceControlPanelManual />
+      ) : (
+        <Loading />
+      )}
     </div>
   );
 };

@@ -1,0 +1,11 @@
+@use "../../variables.scss" as v;
+
+.wrapper {
+  width: 100%;
+  max-width: 1200px;
+  padding: v.$navbarHeight 0;
+  margin: 0 auto;
+  @media screen and(max-width: v.$responsiveWidth) {
+    padding: v.$navbarHeightResponsive 0;
+  }
+}

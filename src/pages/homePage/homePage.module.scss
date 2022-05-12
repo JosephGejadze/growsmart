@@ -1,12 +1,13 @@
+@use "../../variables.scss" as v;
 @import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Jost:wghtJost:wght@200;500&display=swap");
+
 .hompage {
   background: url("../../images/6.gif");
   background-repeat: no-repeat;
   background-position: right;
   background-size: 65%;
-  width: 98vw;
-  color: black;
+  width: 100%;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -15,9 +16,9 @@
   .header {
     text-align: center;
     font-size: 2rem;
-    text-shadow: 4px 4px #f8973d;
+    text-shadow: 4px 4px v.$secondaryColor;
     text-decoration-style: wavy;
-    color: #274750;
+    color: v.$fontColor;
     font-family: "Bangers", cursive;
     line-height: 1;
     letter-spacing: 0.09em;
@@ -27,8 +28,8 @@
     text-align: center;
     text-decoration-line: overline;
     text-decoration-style: wavy;
-    color: #374443;
-    text-shadow: 4px 4px #f8973d;
+    color: v.$fontColor;
+    text-shadow: 4px 4px v.$secondaryColor;
     font-family: "Bangers", cursive;
     letter-spacing: 0.09em;
   }
@@ -42,24 +43,24 @@
     margin-bottom: 15px;
     .Grow {
       width: 30rem;
-      color: #274750;
+      color: v.$fontColor;
       font-size: 1rem;
       font-family: "Jost", sans-serif;
       font-weight: 600;
 
       h1 {
         font-size: 1.2rem;
-        color: #274750;
+        color: v.$fontColor;
         font-family: "Bangers", cursive;
         letter-spacing: 0.2em;
         width: inherit;
       }
       h1::first-letter {
-        color: #274750;
-        text-shadow: 3px 3px #f8973d;
+        color: v.$fontColor;
+        text-shadow: 3px 3px v.$secondaryColor;
         letter-spacing: 0.2em;
         font-size: 1.1em;
-        border: solid #6b936c;
+        border: solid v.$primaryColor;
         padding: 2px;
         margin: 3px;
       }
@@ -81,22 +82,47 @@
 }
 .homepage2 {
   margin-top: 2rem;
-  width: 98vw;
+  width: 100%;
   height: auto;
-  color: black;
   justify-content: space-evenly;
   display: flex;
   flex-direction: row;
   align-items: center;
   .detailscontainer {
     width: 30rem;
-    background-color: #f3ede9;
-    color: #274750;
+    background-color: v.$thirdColor;
+    color: v.$fontColor;
     font-size: 1rem;
     font-family: "Bangers", cursive;
     border-radius: 10px;
     padding: 1rem;
     line-height: 1.5;
     letter-spacing: 0.09em;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .hompage {
+    .header {
+      font-size: 1.5rem !important;
+    }
+    .mini_description {
+      font-size: 1.5rem !important;
+    }
+    .mainContent .Grow {
+      font-size: 0.8rem !important;
+      width: 90% !important;
+    }
+  }
+  .homepage2 {
+    justify-content: center;
+    flex-direction: column-reverse;
+    .detailscontainer {
+      width: 18rem;
+      margin-bottom: 1rem !important;
+      height: 18rem;
+      font-size: 0.8rem !important;
+      overflow: hidden;
+    }
   }
 }

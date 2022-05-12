@@ -1,29 +1,49 @@
+@use "../../../variables.scss" as v;
+
 .authPage {
+  @media screen and (max-width: 800px) {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    .authcontainer {
+      height: 18rem;
+      font-size: 0.8rem;
+      background: url("../../../images/plant.gif");
+      background-size: 40%;
+      background-repeat: no-repeat;
+      background-position: right;
+      button {
+        font-size: 1.4rem !important;
+      }
+    }
+    .plant {
+      display: none !important;
+    }
+  }
   width: 100%;
   max-width: 1000px;
-  color: black;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin: 8rem auto 0 auto;
+  margin: 2rem auto 0 auto;
   .authcontainer {
     display: flex;
     flex-direction: column;
-    background-color: #f3ede9;
-    color: #274750;
+    background-color: v.$thirdColor;
+    color: v.$fontColor;
     width: 20rem;
     padding: 2rem;
     border: solid none;
     border-radius: 20px;
-    box-shadow: 10px 10px 10px 10px #6b936c;
+    box-shadow: 10px 10px 10px 10px v.$primaryColor;
     input {
       width: 15rem;
       font-size: 1.5rem;
       border-radius: 5px;
       border: none;
       border-radius: 15px;
-      box-shadow: 3px 3px 3px 4px #6b936c;
+      box-shadow: 3px 3px 3px 4px v.$primaryColor;
     }
     button {
       width: 12rem;
@@ -32,8 +52,8 @@
       border-radius: 5px;
       border: none;
       margin: 2rem auto;
-      background-color: #f8973d;
-      color: #274750;
+      background-color: v.$secondaryColor;
+      color: v.$fontColor;
       cursor: pointer;
     }
   }

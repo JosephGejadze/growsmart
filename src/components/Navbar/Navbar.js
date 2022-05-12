@@ -1,4 +1,4 @@
-import { PAGES, PAGE_NAMES } from "../constants";
+import { PAGES, PAGE_NAMES } from "../../constants";
 import styles from "./navbar.module.scss";
 
 const Navbar = ({ currentPage, setCurrentPage }) => {
