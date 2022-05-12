@@ -1,59 +1,96 @@
+@use "../../variables.scss" as v;
+
 .AboutUsPage {
-    background-color: #e1e8ff;;
-    width: 100%;
-    height:auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+  width: 100%;
+  margin-top: 5%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-.ContainerWe{
-    width: 80rem;
-    margin: 70px;
-    height: 35rem;
+.ContainerWe {
+  width: 47rem;
+  // margin: 70px;
+  height: 20rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  padding: 3rem;
+  border: 10px solid v.$secondaryColor;
+  border-radius: 40px;
+  background: url("../../images/team2.gif");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 60%;
+  .Usheader {
+    color: v.$fontColor;
+    text-shadow: 3px 3px v.$secondaryColor;
+    background-color: v.$primaryColor;
+    border: solid none;
+    border-radius: 20px;
     font-weight: bold;
+    align-items: center;
     display: flex;
-    justify-content: space-evenly;
-    flex-direction: column;
-    padding: 40px;
-    border: 15px dotted #ffd803;
-    background-image: url("../../images/BackgroundImg.png");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    .Usheader {
-        color: #272343;
-        background-color: #ffd803;
-        font-size:xx-large;
-        font-weight: bold;
-        align-items: center;
-        display: flex;
-        justify-content: center;
-        padding: 1rem;
-        font-family: "Anton", sans-serif;
-    }
-    ul li{
-        margin-bottom: 25px;
-        list-style-type: circle;
-        font-size: larger;
-        font-family: "Anton", sans-serif;
-        margin-bottom: 5rem;
-    }
+    justify-content: center;
+    padding: 0.5rem;
+    font-family: "Anton", sans-serif;
+  }
+  ul li {
+    list-style-type: circle;
+    font-size: larger;
+    font-family: "Anton", sans-serif;
+    margin-bottom: 5rem;
+    color: v.$fontColor;
+  }
 }
 .Container {
   margin: 70px;
-  width: 40rem;
+  width: 31rem;
   height: 25rem;
-  background-color: #bae8e8;
-  border: 1px solid #bae8e8;
-  box-shadow: 30px 30px 15px #ffd803;
+  background-color: v.$thirdColor;
+  border: 5px solid v.$secondaryColor;
+  box-shadow: 10px 15px 15px v.$primaryColor;
   border-radius: 10px;
   display: flex;
   justify-content: space-evenly;
   margin: 2rem;
   .Images {
-    width: "17rem";
+    width: 17rem;
     height: auto;
-    padding: 15px;
+    padding: 1rem;
+    border: 3px solid none;
+    border-radius: 15px;
+  }
+  h1 {
+    color: v.$fontColor;
+    width: 15rem;
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .Container {
+    flex-direction: column;
+    align-items: center !important;
+    .Images {
+      width: 40% !important;
+    }
+  }
+  .ContainerWe {
+    width: 31rem;
+    margin: 2rem;
+    background-image: none !important;
+    height: 20rem;
+    flex-direction: column !important;
+    .Usheader {
+      font-size: 1.5rem;
+    }
+    .UsList li {
+      margin: 1.5rem;
+      font-size: 1rem;
+    }
   }
 }

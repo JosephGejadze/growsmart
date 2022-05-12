@@ -1,9 +1,9 @@
 import styles from "./homePage.module.scss";
-import ImageSwapper from "./images";
+import ImageSwapper from "../../components/ImageSwapper/ImageSwapper";
 
 const HomePage = () => {
   return (
-    <div>
+    <>
       <div className={styles.hompage}>
         <div>
           <h1 className={styles.header}>GrowSmart</h1>
@@ -41,16 +41,16 @@ const HomePage = () => {
         </div>
       </div>
       <div className={styles.homepage2}>
-        <ImageSwapper></ImageSwapper>
+        <ImageSwapper />
         <div className={styles.detailscontainer}>
           <h3 className={styles.header3}>WHAT IS IT ANYWAY?</h3>
           <p>
             In short, GrowSmart is a device that will allow its owner to grow
             any desired plants or fungi at home. Powered by IoT technology and
             equipped with multiple sensors, it will allow the owner to take care
-            of thes growing entity in a completely remote and automated way
+            of the growing entity in a completely remote and automated way
           </p>
-          <h3 className={styles.header3}>Conditions Control:</h3>
+          <h4 className={styles.header3}>Conditions Control:</h4>
           <ul>
             <li>Temperature</li>
             <li>Moisture</li>
@@ -59,7 +59,7 @@ const HomePage = () => {
           </ul>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

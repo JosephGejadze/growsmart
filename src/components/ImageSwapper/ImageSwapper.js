@@ -2,6 +2,7 @@ import growBox from "../../images/grow-box.png";
 import img3 from "../../images/img3.png";
 import { useState, useEffect, useCallback } from "react";
 import React from "react";
+import styles from "./ImageSwapper.module.scss";
 
 const images = [growBox, img3];
 
@@ -21,8 +22,14 @@ export default function ImageSwapper() {
   }, [currentImage]);
 
   return (
-    <div>
-      <img width={500} height={500} src={images[currentImage]} alt="growbox" />
+    <div className={styles.container}>
+      <img
+        className={styles.images}
+        // width={500}
+        // height={500}
+        src={images[currentImage]}
+        alt="growbox"
+      />
     </div>
   );
 }

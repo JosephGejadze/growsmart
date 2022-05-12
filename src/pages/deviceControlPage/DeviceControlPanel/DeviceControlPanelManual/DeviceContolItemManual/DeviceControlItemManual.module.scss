@@ -1,0 +1,41 @@
+@use "../../../../../variables.scss" as v;
+.item {
+  color: v.$sliderColor;
+  font-family: "Bangers", cursive;
+  margin: 1rem 5rem 4rem 5rem;
+  width: 20rem;
+  height: 22rem;
+  border-radius: 10px;
+  letter-spacing: 0.2em;
+  font-size: 1.2rem;
+  .buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15%;
+    .button {
+      font-size: 1.5rem;
+      font-weight: bold;
+      width: 8rem;
+      cursor: pointer;
+      border-radius: 10px;
+      background-color: #274750;
+      color: v.$secondaryColor;
+    }
+  }
+
+  .container_header {
+    text-align: center;
+  }
+  .image_container {
+    margin: auto;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      width: 50%;
+      height: auto;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+.container {
+  @media screen and (max-width: 800px) {
+    .images {
+      width: 15rem !important;
+      height: 15rem !important;
+      margin-right: 1rem;
+    }
+  }
+  .images {
+    width: 500px;
+    height: 500px;
+  }
+}

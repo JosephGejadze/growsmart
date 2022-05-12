@@ -1,17 +1,16 @@
 import { useCallback, useState } from "react";
-import styles from "./DeviceControlPanel/DeviceControlPanel.module.scss";
-import DeviceControlPanel from "./DeviceControlPanel/DeviceControlPanel";
 import DeviceControlAuth from "./DeviceControlAuth/DeviceControlAuth";
+import DeviceControlPanel from "./DeviceControlPanel/DeviceControlPanel";
 
 const DeviceControlPage = () => {
-  const [isAuth, setIsAuth] = useState(false);
+  const [isAuth, setIsAuth] = useState(true); // TODO: set to false
 
   const onAuthenticate = useCallback(() => {
     setIsAuth(true);
   }, []);
 
   return (
-    <div className={styles.container}>
+    <div>
       {isAuth ? (
         <DeviceControlPanel />
       ) : (

@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./DeviceControlItem.module.scss";
+import styles from "./DeviceControlItemAutomatic.module.scss";
 
 const DeviceControlItem = ({
   title,
@@ -15,13 +15,14 @@ const DeviceControlItem = ({
       <div className={styles.container_header}>
         <h1>{title}</h1>
       </div>
+      <div className={styles.buttons}></div>
       <div></div>
       <div className={styles.image_container}>
         <img
           src={icon}
           style={{
-            width: `calc(${Number((100 * (value - min)) / max) + 100}px)`,
-            height: `calc(${Number((100 * (value - min)) / max) + 100}px)`,
+            width: `calc(${Number((100 * (value - min)) / max) + 80}px)`,
+            height: `calc(${Number((100 * (value - min)) / max) + 80}px)`,
           }}
           alt="param"
         />
