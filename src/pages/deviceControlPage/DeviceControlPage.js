@@ -3,7 +3,7 @@ import DeviceControlAuth from "./DeviceControlAuth/DeviceControlAuth";
 import DeviceControlPanel from "./DeviceControlPanel/DeviceControlPanel";
 
 const DeviceControlPage = () => {
-  const [isAuth, setIsAuth] = useState(true); // TODO: set to false
+  const [isAuth, setIsAuth] = useState(false); // TODO: set to false
 
   const onAuthenticate = useCallback(() => {
     setIsAuth(true);
