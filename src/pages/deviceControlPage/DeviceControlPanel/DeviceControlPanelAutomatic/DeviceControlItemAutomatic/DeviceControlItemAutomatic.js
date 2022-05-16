@@ -1,4 +1,5 @@
 import React from "react";
+import { thresholdTypes } from "../DeviceControlPanelAutomatic";
 import styles from "./DeviceControlItemAutomatic.module.scss";
 
 const DeviceControlItem = ({
@@ -9,14 +10,15 @@ const DeviceControlItem = ({
   backgroundColor,
   min,
   max,
+  onApply,
+  thresholdType,
+  setThresholdType,
 }) => {
   return (
     <div className={styles.item} style={{ backgroundColor }}>
       <div className={styles.container_header}>
         <h1>{title}</h1>
       </div>
-      <div className={styles.buttons}></div>
-      <div></div>
       <div className={styles.image_container}>
         <img
           src={icon}
@@ -37,6 +39,29 @@ const DeviceControlItem = ({
         onChange={onChange}
       />
       <div className={styles.level_indicator}>{value}</div>
+      <button className={styles.apply} onClick={onApply}>
+        Apply
+      </button>
+      {setThresholdType && setThresholdType ? (
+        <div className={styles.radio}>
+          <input
+            type="radio"
+            id="th_lower"
+            name="threshold_type"
+            value={thresholdTypes.lower}
+            onClick={() => setThresholdType(thresholdTypes.lower)}
+          />
+          <label htmlFor="th_lower">Lower</label>
+          <input
+            type="radio"
+            id="th_upper"
+            name="threshold_type"
+            value={thresholdTypes.upper}
+            onClick={() => setThresholdType(thresholdTypes.upper)}
+          />
+          <label htmlFor="th_upper">Upper</label>
+        </div>
+      ) : null}
     </div>
   );
 };
