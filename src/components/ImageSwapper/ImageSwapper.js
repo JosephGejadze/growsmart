@@ -1,6 +1,6 @@
 import growBox from "../../images/grow-box.png";
 import img3 from "../../images/img3.png";
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect } from "react";
 import React from "react";
 import styles from "./ImageSwapper.module.scss";
 
